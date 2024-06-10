@@ -7,12 +7,20 @@ using UndoStringBuilder;
 
 namespace UndoStringBuilder
 {
-    public class RemoveCommand(StringBuilder stringBuilder, int index, int length) : ICommand
+    public class RemoveCommand : ICommand
     {
-        private System.Text.StringBuilder stringBuilder = stringBuilder;
-        private string removedText;
-        private int length = length;
-        private int index = index;
+        private StringBuilder stringBuilder;
+        private string? removedText;
+        private int length;
+        private int index;
+        public RemoveCommand(StringBuilder stringBuilder, int index, int length)
+        { 
+            this.stringBuilder = stringBuilder;
+            this.index = index;
+            this.length = length;
+            this.removedText = null;
+        }
+        
 
         public void Execute()
         {

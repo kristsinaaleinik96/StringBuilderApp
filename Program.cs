@@ -12,15 +12,21 @@ namespace UndoStringBuilder
         static void Main(string[] args)
         {
             CustomStringBuilder customStringBuilder = new CustomStringBuilder();
-            customStringBuilder.Append("0");
-            customStringBuilder.Append("2");
-            customStringBuilder.Append("6");
+            customStringBuilder.Append("new");
+            customStringBuilder.Append("text");
+            customStringBuilder.Append("is");
+            customStringBuilder.Append("added");
+            customStringBuilder.Remove(3, 5);
 
-            customStringBuilder.Undo();
-            customStringBuilder.Undo();
+
+
+            //customStringBuilder.Undo();
+           // customStringBuilder.Undo();
+
 
             customStringBuilder.ToString(); //test1
-            Console.Write(customStringBuilder);
+            Console.WriteLine(customStringBuilder);
+            Console.ReadLine();
         }
     }
 }

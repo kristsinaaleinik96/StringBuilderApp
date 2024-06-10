@@ -23,6 +23,7 @@ namespace UndoStringBuilder
 
         public void Append(string value)
         {
+            //stringBuilder.
             var command = new AppendCommand(stringBuilder, value);
             command.Execute();
             commandsList.Push(command);
@@ -47,11 +48,6 @@ namespace UndoStringBuilder
         public override string ToString()
         {
             return stringBuilder.ToString();
-        }
-
-        public static implicit operator System.Text.StringBuilder(CustomStringBuilder v)
-        {
-            throw new NotImplementedException();
         }
     }
 }

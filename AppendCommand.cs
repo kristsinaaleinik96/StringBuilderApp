@@ -10,7 +10,7 @@ namespace UndoStringBuilder
     internal class AppendCommand : ICommand
     {
 
-        private System.Text.StringBuilder stringBuilder;//почему-то без  System.Text. в этой строке не работало
+        private StringBuilder stringBuilder;
         private string value;
 
         public AppendCommand(StringBuilder stringBuilder, string value)
